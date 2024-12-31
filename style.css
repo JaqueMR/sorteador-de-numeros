@@ -7,11 +7,12 @@
 
 body {
     background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
-    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 100vh;
     overflow-y: auto; 
+    flex-direction: column; 
 }
 
 body::before {
@@ -33,7 +34,7 @@ body::before {
     align-items: center;
     justify-content: space-between;
     border-radius: 24px;
-    border: 1px solid transparent;
+    border: 1px solid #1875E8;
     box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
     background-image: url("img/Ruido.webp");
     background-size: 100% 100%;
@@ -128,13 +129,18 @@ h1 {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    word-wrap: break-word;
-    word-break: break-word;
+    word-wrap: break-word; 
+    word-break: break-word; 
     overflow-wrap: break-word;
 }
 
 /* Media Queries para dispositivos móveis */
 @media screen and (max-width: 480px) {
+    body {
+        overflow: auto; 
+        height: auto;   
+    }
+
     h1 {
         font-size: 1.5rem; 
     }
